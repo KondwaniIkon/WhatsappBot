@@ -57,6 +57,7 @@ def whatsapp():
     else:
         bot_response = "I'm here to help! Please type 'services', 'quote', or 'contact' to get started."
 
+    # Send the bot's response
     msg.body(bot_response)
 
     # Save query and response to the database
@@ -75,4 +76,3 @@ if __name__ == "__main__":
     # Initialize the database
     init_db()
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-
